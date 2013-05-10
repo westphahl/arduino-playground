@@ -1,3 +1,5 @@
 language: c
-compiler: gcc
-script: "make all"
+before_install:
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq avrdude gcc-avr avr-libc
+script: make
